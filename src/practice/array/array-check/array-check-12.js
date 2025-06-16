@@ -9,14 +9,14 @@ export function hasFibonaciNumber(numberList) {
 function generateFibonaciList(n) {
   if (n < 0) return [];
   if (n === 1) return [0];
-  if (n === 2) return [0, 1, 1];
 
   const fibonaciList = [0, 1];
-  let currentNumber = fibonaciList[fibonaciList.length - 1] + fibonaciList[fibonaciList.length - 2];
 
-  while (currentNumber < n) {
+  while (true) {
+    const currentNumber =
+      fibonaciList[fibonaciList.length - 1] + fibonaciList[fibonaciList.length - 2];
+    if (currentNumber > n) break;
     fibonaciList.push(currentNumber);
-    currentNumber = fibonaciList[fibonaciList.length - 1] + fibonaciList[fibonaciList.length - 2];
   }
 
   return fibonaciList;

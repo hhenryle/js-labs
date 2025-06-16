@@ -9,3 +9,5 @@ const studentList = [
   { id: 1, name: 'Easy' },
   { id: 2, name: 'Frontend' },
 ];
+
+console.log(findStudentById(studentList, 2));
