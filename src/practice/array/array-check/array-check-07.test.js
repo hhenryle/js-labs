@@ -9,11 +9,11 @@ describe('hasAlice()', () => {
     expect(hasAlice(123)).toBe(false);
   });
 
-  test('should return false when studentList is a empty array', () => {
+  test('should return false for empty array', () => {
     expect(hasAlice([])).toBe(false);
   });
 
-  test('should return false when studentList does not have any student taht has name is Alice and gender is Female', () => {
+  test("should return false when studentList doesn't have Alice", () => {
     expect(hasAlice([{ id: 1, name: 'Alice', gender: 'male' }])).toBe(false);
     expect(hasAlice([{ id: 2, name: 'Henry', gender: 'female' }])).toBe(false);
   });
